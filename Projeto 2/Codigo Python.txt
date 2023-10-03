@@ -1,0 +1,63 @@
+import math
+
+class Circulo:
+    def __init__(self, raio):
+        self.raio = raio
+    
+    def calcular_area(self):
+        return math.pi * self.raio * self.raio
+    
+    def calcular_perimetro(self):
+        return 2 * math.pi * self.raio
+
+class Quadrado:
+    def __init__(self, lado):
+        self.lado = lado
+    
+    def calcular_area(self):
+        return self.lado * self.lado
+    
+    def calcular_perimetro(self):
+        return 4 * self.lado
+
+class Triangulo:
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+    
+    def calcular_area(self):
+        return 0.5 * self.base * self.altura
+    
+    def calcular_perimetro(self):
+        print("Não é possível calcular o perímetro de um triângulo com base e altura apenas.")
+
+def main():
+    print("Escolha uma forma geométrica: ")
+    forma = input().lower()
+
+    if forma == "círculo":
+        raio = float(input("Digite o raio do círculo: "))
+        circulo = Circulo(raio)
+        area = circulo.calcular_area()
+        perimetro = circulo.calcular_perimetro()
+        print(f"Área do círculo: {area:.2f}")
+        print(f"Perímetro do círculo: {perimetro:.2f}")
+    elif forma == "quadrado":
+        lado = float(input("Digite o lado do quadrado: "))
+        quadrado = Quadrado(lado)
+        area = quadrado.calcular_area()
+        perimetro = quadrado.calcular_perimetro()
+        print(f"Área do quadrado: {area:.2f}")
+        print(f"Perímetro do quadrado: {perimetro:.2f}")
+    elif forma == "triângulo":
+        base = float(input("Digite a base do triângulo: "))
+        altura = float(input("Digite a altura do triângulo: "))
+        triangulo = Triangulo(base, altura)
+        area = triangulo.calcular_area()
+        triangulo.calcular_perimetro()
+        print(f"Área do triângulo: {area:.2f}")
+    else:
+        print("Forma geométrica inválida.")
+
+if __name__ == "__main__":
+    main()

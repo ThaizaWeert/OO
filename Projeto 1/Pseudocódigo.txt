@@ -1,0 +1,75 @@
+Classe Circulo
+    Atributos:
+        raio: real
+
+    Método CalcularArea():
+        Retorne 3.14 * raio * raio
+
+    Método CalcularPerimetro():
+        Retorne 2 * 3.14 * raio
+
+Fim Classe Circulo
+
+Classe Quadrado
+    Atributos:
+        lado: real
+
+    Método CalcularArea():
+        Retorne lado * lado
+
+    Método CalcularPerimetro():
+        Retorne 4 * lado
+
+Fim Classe Quadrado
+
+Classe Triangulo
+    Atributos:
+        base: real
+        altura: real
+
+    Método CalcularArea():
+        Retorne 0.5 * base * altura
+
+    Método CalcularPerimetro():
+        Escreva("Não é possível calcular o perímetro de um triângulo com base e altura apenas.")
+Fim Classe Triangulo
+
+---
+
+Função Principal:
+    Escreva("Escolha uma forma geométrica: ")
+    Forma = LerEntradaDoUsuario()
+
+    Se Forma igual a "círculo" Então
+        Escreva("Digite o raio do círculo: ")
+        Raio = LerEntradaDoUsuario()
+        ObjetoCirculo = Nova Instância da Classe Circulo
+        ObjetoCirculo.raio = Raio
+        Area = ObjetoCirculo.CalcularArea()
+        Perimetro = ObjetoCirculo.CalcularPerimetro()
+        Escreva("Área do círculo: " + Area)
+        Escreva("Perímetro do círculo: " + Perimetro)
+    Senão Se Forma igual a "quadrado" Então
+        Escreva("Digite o lado do quadrado: ")
+        Lado = LerEntradaDoUsuario()
+        ObjetoQuadrado = Nova Instância da Classe Quadrado
+        ObjetoQuadrado.lado = Lado
+        Area = ObjetoQuadrado.CalcularArea()
+        Perimetro = ObjetoQuadrado.CalcularPerimetro()
+        Escreva("Área do quadrado: " + Area)
+        Escreva("Perímetro do quadrado: " + Perimetro)
+    Senão Se Forma igual a "triângulo" Então
+        Escreva("Digite a base do triângulo: ")
+        Base = LerEntradaDoUsuario()
+        Escreva("Digite a altura do triângulo: ")
+        Altura = LerEntradaDoUsuario()
+        ObjetoTriangulo = Nova Instância da Classe Triangulo
+        ObjetoTriangulo.base = Base
+        ObjetoTriangulo.altura = Altura
+        Area = ObjetoTriangulo.CalcularArea()
+        Perimetro = ObjetoTriangulo.CalcularPerimetro()
+        Escreva("Área do triângulo: " + Area)
+        Escreva("Perímetro do triângulo: " + Perimetro)
+    Senão
+        Escreva("Forma geométrica inválida.")
+Fim Função Principal
