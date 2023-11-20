@@ -1,0 +1,1 @@
+Esse diagrama mostra as três classes - Circulo, Quadrado, Triangulo - que herdam de uma classe base FormaGeometrica e a classe Main que utiliza essas formas geométricas para realizar os cálculos.
